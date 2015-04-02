@@ -38,6 +38,8 @@ function doDeploy(options, tagOpts, next) {
    next = tagOpts;
  }
  var originRef = options.originRef;
+ console.log("LOOK HERE");
+ console.log(originRef);
  var deployRef = options.deployRef;
  var push = function(done){
    var pushArgs = ['push'];
@@ -49,7 +51,7 @@ function doDeploy(options, tagOpts, next) {
      pushArgs.push(options.herokuRemote);
    }
    pipeAll(spawn('git', pushArgs)).on('exit', done);
- }
+ };
  if(options.deployTag){
    push(function(){
      next();
@@ -61,7 +63,7 @@ function doDeploy(options, tagOpts, next) {
          pipeAll(spawn('git', ['checkout', originRef])).on('exit', function() {
            next();
          });
-       })
+       });
      });
    });
   }
@@ -93,28 +95,28 @@ function getCurrentBranch(next) {
 function getCurrentCommitHash(next) {
  allOutput(spawn('git', ['log', '-1', '--format=format:"%H"']), function(err, out) {
    next(err, out && out.replace(/\n|\r/g, ''));
- });  
+ });
 }
 
 exports.init = function(grunt){
   var exports = {};
-  
+
   exports['deploy'] = function(options, next){
-    var options = options || {}
-    var deployArgs
+    var options = options || {};
+    var deployArgs;
     if(options.deployTag){
-      options.deployRef = options.deployTag || "deploy"
-      options.tag = options.deployRef
+      options.deployRef = options.deployTag || "deploy";
+      options.tag = options.deployRef;
       deployArgs = [options,{
         tag : options.deployTag,
         push : options.pushTag,
         origin : options.origin || "origin"
-      }]
+      }];
     } else {
-      options.deployRef = options.deployBranch || "deploy"
-      deployArgs = [options]
+      options.deployRef = options.deployBranch || "deploy";
+      deployArgs = [options];
     }
-    deployArgs.push(next)
+    deployArgs.push(next);
 
     getCurrentBranch(function(err, branch) {
       if (err) {
@@ -130,16 +132,16 @@ exports.init = function(grunt){
           }
 
           console.log('Using ' + csid + ' as ref to merge.');
-          deployArgs[0].originRef = csid
+          deployArgs[0].originRef = csid;
           doDeploy.apply(null,deployArgs);
         });
       } else {
         console.log('Current branch is ' + branch);
-        deployArgs[0].originRef = branch
+        deployArgs[0].originRef = branch;
         doDeploy.apply(null,deployArgs);
       }
     });
-  }
-  
+  };
+
   return exports;
-}
+};
