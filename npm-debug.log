@@ -1,0 +1,131 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.7.0
+3 info using node@v0.12.0
+4 verbose install where, deps [ '/Users/lilypace/grunt-heroku-deploy', [ 'grunt' ] ]
+5 verbose install where, peers [ '/Users/lilypace/grunt-heroku-deploy', [] ]
+6 info preinstall grunt-heroku-deploy@0.1.1
+7 silly cache add args [ 'grunt@~0.4.11', null ]
+8 verbose cache add spec grunt@~0.4.11
+9 silly cache add parsed spec { raw: 'grunt@~0.4.11',
+9 silly cache add   scope: null,
+9 silly cache add   name: 'grunt',
+9 silly cache add   rawSpec: '~0.4.11',
+9 silly cache add   spec: '>=0.4.11 <0.5.0',
+9 silly cache add   type: 'range' }
+10 verbose addNamed grunt@>=0.4.11 <0.5.0
+11 silly addNamed semver.valid null
+12 silly addNamed semver.validRange >=0.4.11 <0.5.0
+13 silly addNameRange { name: 'grunt', range: '>=0.4.11 <0.5.0', hasData: false }
+14 silly mapToRegistry name grunt
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/grunt
+18 verbose addNameRange registry:https://registry.npmjs.org/grunt not in flight; fetching
+19 verbose request uri https://registry.npmjs.org/grunt
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 12:32:12 PM
+22 verbose request id b71b14a46c1e522f
+23 verbose etag "D92BJMVTARKPOXV57CJ5K1WJW"
+24 http request GET https://registry.npmjs.org/grunt
+25 http 304 https://registry.npmjs.org/grunt
+26 silly get cb [ 304,
+26 silly get   { date: 'Thu, 02 Apr 2015 19:32:12 GMT',
+26 silly get     server: 'Apache',
+26 silly get     via: '1.1 varnish',
+26 silly get     'last-modified': 'Thu, 02 Apr 2015 19:32:12 GMT',
+26 silly get     'cache-control': 'max-age=60',
+26 silly get     etag: '"D92BJMVTARKPOXV57CJ5K1WJW"',
+26 silly get     age: '49',
+26 silly get     'x-served-by': 'cache-sjc3122-SJC',
+26 silly get     'x-cache': 'HIT',
+26 silly get     'x-cache-hits': '1',
+26 silly get     'x-timer': 'S1428003132.653270,VS0,VE0',
+26 silly get     vary: 'Accept',
+26 silly get     'content-length': '0',
+26 silly get     'keep-alive': 'timeout=10, max=50',
+26 silly get     connection: 'Keep-Alive' } ]
+27 verbose etag https://registry.npmjs.org/grunt from cache
+28 verbose get saving grunt to /Users/lilypace/.npm/registry.npmjs.org/grunt/.cache.json
+29 silly addNameRange number 2 { name: 'grunt', range: '>=0.4.11 <0.5.0', hasData: true }
+30 silly addNameRange versions [ 'grunt',
+30 silly addNameRange   [ '0.1.0',
+30 silly addNameRange     '0.1.1',
+30 silly addNameRange     '0.1.2',
+30 silly addNameRange     '0.2.0',
+30 silly addNameRange     '0.2.1',
+30 silly addNameRange     '0.2.2',
+30 silly addNameRange     '0.2.3',
+30 silly addNameRange     '0.2.4',
+30 silly addNameRange     '0.2.5',
+30 silly addNameRange     '0.2.6',
+30 silly addNameRange     '0.2.7',
+30 silly addNameRange     '0.2.8',
+30 silly addNameRange     '0.2.9',
+30 silly addNameRange     '0.2.10',
+30 silly addNameRange     '0.2.11',
+30 silly addNameRange     '0.2.12',
+30 silly addNameRange     '0.2.13',
+30 silly addNameRange     '0.2.14',
+30 silly addNameRange     '0.2.15',
+30 silly addNameRange     '0.3.0',
+30 silly addNameRange     '0.3.1',
+30 silly addNameRange     '0.3.2',
+30 silly addNameRange     '0.3.3',
+30 silly addNameRange     '0.3.4',
+30 silly addNameRange     '0.3.5',
+30 silly addNameRange     '0.3.6',
+30 silly addNameRange     '0.3.7',
+30 silly addNameRange     '0.3.8',
+30 silly addNameRange     '0.3.9',
+30 silly addNameRange     '0.3.10',
+30 silly addNameRange     '0.3.11',
+30 silly addNameRange     '0.3.12',
+30 silly addNameRange     '0.3.13',
+30 silly addNameRange     '0.3.14',
+30 silly addNameRange     '0.3.15',
+30 silly addNameRange     '0.3.16',
+30 silly addNameRange     '0.3.17',
+30 silly addNameRange     '0.4.0',
+30 silly addNameRange     '0.4.1',
+30 silly addNameRange     '0.4.2',
+30 silly addNameRange     '0.4.3',
+30 silly addNameRange     '0.4.4',
+30 silly addNameRange     '0.4.5',
+30 silly addNameRange     '0.3.13-a',
+30 silly addNameRange     '0.4.0-a',
+30 silly addNameRange     '0.4.0-rc1',
+30 silly addNameRange     '0.4.0-rc2',
+30 silly addNameRange     '0.4.0-rc3',
+30 silly addNameRange     '0.4.0-rc4',
+30 silly addNameRange     '0.4.0-rc5',
+30 silly addNameRange     '0.4.0-rc6',
+30 silly addNameRange     '0.4.0-rc7',
+30 silly addNameRange     '0.4.0-rc8' ] ]
+31 verbose stack Error: No compatible version found: grunt@'>=0.4.11 <0.5.0'
+31 verbose stack Valid install targets:
+31 verbose stack ["0.1.0","0.1.1","0.1.2","0.2.0","0.2.1","0.2.2","0.2.3","0.2.4","0.2.5","0.2.6","0.2.7","0.2.8","0.2.9","0.2.10","0.2.11","0.2.12","0.2.13","0.2.14","0.2.15","0.3.0","0.3.1","0.3.2","0.3.3","0.3.4","0.3.5","0.3.6","0.3.7","0.3.8","0.3.9","0.3.10","0.3.11","0.3.12","0.3.13","0.3.14","0.3.15","0.3.16","0.3.17","0.4.0","0.4.1","0.4.2","0.4.3","0.4.4","0.4.5","0.3.13-a","0.4.0-a","0.4.0-rc1","0.4.0-rc2","0.4.0-rc3","0.4.0-rc4","0.4.0-rc5","0.4.0-rc6","0.4.0-rc7","0.4.0-rc8"]
+31 verbose stack
+31 verbose stack     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:266:12)
+31 verbose stack     at next (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:245:17)
+31 verbose stack     at setData (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:222:5)
+31 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+31 verbose stack     at f (/usr/local/lib/node_modules/npm/node_modules/once/once.js:17:25)
+31 verbose stack     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:173:7)
+31 verbose stack     at FSReqWrap.oncomplete (fs.js:99:15)
+32 verbose cwd /Users/lilypace/grunt-heroku-deploy
+33 error Darwin 13.4.0
+34 error argv "node" "/usr/local/bin/npm" "install"
+35 error node v0.12.0
+36 error npm  v2.7.0
+37 error code ETARGET
+38 error notarget No compatible version found: grunt@'>=0.4.11 <0.5.0'
+38 error notarget Valid install targets:
+38 error notarget ["0.1.0","0.1.1","0.1.2","0.2.0","0.2.1","0.2.2","0.2.3","0.2.4","0.2.5","0.2.6","0.2.7","0.2.8","0.2.9","0.2.10","0.2.11","0.2.12","0.2.13","0.2.14","0.2.15","0.3.0","0.3.1","0.3.2","0.3.3","0.3.4","0.3.5","0.3.6","0.3.7","0.3.8","0.3.9","0.3.10","0.3.11","0.3.12","0.3.13","0.3.14","0.3.15","0.3.16","0.3.17","0.4.0","0.4.1","0.4.2","0.4.3","0.4.4","0.4.5","0.3.13-a","0.4.0-a","0.4.0-rc1","0.4.0-rc2","0.4.0-rc3","0.4.0-rc4","0.4.0-rc5","0.4.0-rc6","0.4.0-rc7","0.4.0-rc8"]
+38 error notarget
+38 error notarget This is most likely not a problem with npm itself.
+38 error notarget In most cases you or one of your dependencies are requesting
+38 error notarget a package version that doesn't exist.
+38 error notarget
+38 error notarget It was specified as a dependency of 'grunt-heroku-deploy'
+39 verbose exit [ 1, true ]
