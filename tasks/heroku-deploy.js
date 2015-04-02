@@ -10,17 +10,18 @@ module.exports = function(grunt) {
 
   // Please see the grunt documentation for more information regarding task and
   // helper creation: https://github.com/cowboy/grunt/blob/master/docs/toc.md
-  
+
   // ==========================================================================
   // INIT
   // ==========================================================================
-  
+
   var herokuDeploy = require('./lib/heroku-deploy').init(grunt)
 
   // ==========================================================================
   // TASKS
   // ==========================================================================
-
+  console.log(pathspec);
+  console.log("HI HI HI");
   grunt.registerMultiTask('heroku-deploy', 'Switch to the deploy branch, merge your starting location, push, and switch back', function() {
     var next = this.async();
     grunt.log.write(
