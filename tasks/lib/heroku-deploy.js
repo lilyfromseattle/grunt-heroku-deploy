@@ -5,8 +5,8 @@
  * Copyright (c) 2012 Adam Ahmed
  * Licensed under the MIT license.
  */
-console.log("HELLO");
-console.log(pathspec);
+// console.log("HELLO");
+// console.log(pathspec);
 var spawn = require('child_process').spawn;
 
 function pipeAll(proc) {
